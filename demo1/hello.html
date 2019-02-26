@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello-vue</title>
+</head>
+<body>
+<div id="app">
+    <h1>{{name}}非常帅</h1>
+    <button @click="dosm">点我</button>
+    <button @click="dosm2">点我2</button>
+    <button @click="dosm3">点我3</button>
+</div>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    function dosm3() {
+        console.log(vm.name);
+    }
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            name :'lisi'
+        },
+        methods:{
+            dosm(){
+                console.log(this.name);
+            },
+            dosm2:function () {
+                console.log(vm.name);
+            }
+        }
+    })
+</script>
+</body>
+</html>
